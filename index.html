@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container {
+            
+            height: 400px;
+            width: 100%;
+            place-items: center;
+            align-items: center;
+            text-align: center;    
+            
+        }
+
+        .container1{
+            background-color: grey;
+            padding-top: 50px;
+            margin-left: 30%;
+            margin-right: 30%;
+            height:300px;
+            margin-top: 170px;
+             
+        }
+
+        button{
+             background-color: blueviolet;
+             border-radius: 5px;height: 30px;
+             
+        }
+        h1{
+            color: blueviolet;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <h1>-: Swap two variable :-</h1>
+    
+            <label for="v1">Varible 1:</label>
+            <input type="number" id="v1">
+            <br> <br>
+    
+            <label for="v2">Varible 2:</label>
+            <input type="number" id="v2">
+            <br> <br>
+    
+    
+            <button onclick="swap()">swap</button>
+    
+            <h2 id="s1"></h2>
+            <h2 id="s2"></h2>
+    
+        </div>
+    
+    </div>
+
+    <script>
+        function swap() {
+
+            var i = document.getElementById("v1").value;
+            var j = document.getElementById("v2").value;
+
+            document.getElementById("s1").innerHTML = "Before Swap : Variable 1 = " + i + "   Variable 2 = " + j;
+
+            var temp = i;
+            i = j;
+            j = temp;
+
+            document.getElementById("s2").innerHTML = "After swap : Variable 1 =" + i + "   variable 2 = " +  j;
+
+        } 
+    </script>
+
+</body>
+
+</html>
